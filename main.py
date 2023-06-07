@@ -10,7 +10,6 @@ from streamlit_option_menu import option_menu
 import hydralit_components as hc
 import datetime
 import streamlit.components.v1 as components
-import cv2
 import time
 import tempfile
 import pandas as pd
@@ -181,27 +180,6 @@ if menu_id == 'Camera Predict':
             else:
                 st.write(f"The Model perdicts with 70% accuracy that the images shows No Signs of Lyme disease")
 
-    # Set up the camera
-    # camera = cv2.VideoCapture(0)
-    #
-    #
-    # # Create a function to capture an image from the camera
-    # def capture_image():
-    #     _, frame = camera.read()
-    #     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    #     return frame_rgb
-    #
-    # # Display camera capture button and cancel button
-    # capture_button = st.button("Capture Image",key='capture')
-    # cancel_button = st.button("Cancel Image",key='cancel')
-    #
-    # # Perform actions based on button clicks
-    # if capture_button:
-    #     image = capture_image()
-    #     st.image(image, caption="Captured Image", use_column_width=True)
-    # elif cancel_button:
-    #     # Reset the camera capture if cancel button is clicked
-    #     camera.release()
 
 if menu_id=='Upload Predict':
     model = load_model('lyme_disease.h5')

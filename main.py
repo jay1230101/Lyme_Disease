@@ -256,19 +256,7 @@ if menu_id=='Metrics':
     plt.savefig(img_buffer, format='png')
     img_buffer.seek(0)
 
-    # st.markdown(
-    #     """
-    #     <style>
-    #     .centered-image-container {
-    #         display: flex;
-    #         justify-content: center;
-    #         align-items: center;
-    #         max-height: 300px;  /* Adjust the max-height as desired */
-    #     }
-    #     </style>
-    #     """,
-    #     unsafe_allow_html=True,
-    # )
+
 
     st.markdown('<div class="image-container">', unsafe_allow_html=True)
     st.image(img_buffer, caption="Line Chart", use_column_width=True)
